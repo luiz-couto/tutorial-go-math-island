@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"go-math-island/animal"
-	"go-math-island/island"
 )
 
 func main() {
@@ -18,15 +17,10 @@ func main() {
 		Kind:   "labradoodle",
 	}
 
-	islandService := island.Island{
-		Cat: &cat,
-		Dog: &dog,
-	}
+	fmt.Println(WhatIsMyName(cat))
+	fmt.Println(WhatIsMyName(dog))
+}
 
-	intList := []int{}
-	for j := 1; j <= 1000000; j++ {
-		intList = append(intList, j)
-	}
-
-	fmt.Println(islandService.SumIntegersListTogetherWithChannels(intList))
+func WhatIsMyName(myanimal animal.AnimalInterface) string {
+	return myanimal.TellMyName()
 }
