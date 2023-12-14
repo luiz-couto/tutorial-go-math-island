@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-
 	cat := animal.Cat{
 		Animal: *animal.NewAnimal("Jiji", 3, true),
 		Color:  "black",
