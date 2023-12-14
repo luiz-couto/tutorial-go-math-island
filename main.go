@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-
 	cat := animal.Cat{
 		Animal: *animal.NewAnimal("Jiji", 3, true),
 		Color:  "black",
@@ -28,5 +27,5 @@ func main() {
 		intList = append(intList, j)
 	}
 
-	fmt.Println(islandService.SumIntegersListTogetherWithChannels(intList))
+	fmt.Println(islandService.SumIntegersList(intList))
 }
